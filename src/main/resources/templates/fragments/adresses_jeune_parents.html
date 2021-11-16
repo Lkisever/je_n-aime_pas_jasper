@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="adresses">
+    <div class="pb-8 rounded-lg border p-5 margin-bt bg2">
+
+        <div class="pb-2">
+            <h1 class="text-xl font-bold text-center" id="adresse">Adresses</h1>
+        </div>
+        <div class="p-5 rounded-lg w-full margin-bt bg3">
+            <p class="text-small font-bold">Domicile du jeune </p>
+            <div th:text="${ficheEntry.adresse.rue}"></div>
+            <div th:text="${ficheEntry.adresse.ville}"></div>
+            <div th:text="${ficheEntry.adresse.codePostal}"></div>
+            <div th:text="${ficheEntry.adresse.pays}" class="pb-2"></div>
+            <img id="maps" src="https://maps.geoapify.com/v1/staticmap?style=osm-carto&amp;width=500&amp;height=400&amp;center=lonlat:2.375215,48.901006&amp;zoom=14&amp;apiKey=#################"
+            />
+        </div>
+
+        <p class="not-break"><div class="rounded-lg border shadow-lg margin-bt bg3">
+            <table class="w-full bg3">
+                <thead class="text-center">
+                <tr>
+                    <th>Parent 1</th>
+                    <th>Parent 2</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr>
+                    <td><span th:text="${ficheEntry.pere.prenom}"></span> <span th:text="${ficheEntry.pere.nom}"></span>
+                    </td>
+                    <td><span th:text="${ficheEntry.mere.prenom}"></span> <span th:text="${ficheEntry.mere.nom}"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td th:text="${ficheEntry.pere.adresse.rue}"></td>
+                    <td th:text="${ficheEntry.mere.adresse.rue}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${ficheEntry.pere.adresse.ville}"></td>
+                    <td th:text="${ficheEntry.mere.adresse.ville}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${ficheEntry.pere.adresse.codePostal}"></td>
+                    <td th:text="${ficheEntry.mere.adresse.codePostal}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${ficheEntry.pere.adresse.pays}"></td>
+                    <td th:text="${ficheEntry.mere.adresse.pays}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div></p>
+    </div>
+</div>

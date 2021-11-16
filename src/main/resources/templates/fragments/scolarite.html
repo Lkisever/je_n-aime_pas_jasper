@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="scolarite">
+    <div class="pb-8 rounded-lg border p-5 margin-bt bg2">
+        <div class="pb-2">
+            <h1 class="text-xl font-bold text-center" id="scolarite">Scolarité</h1>
+        </div>
+        <form>
+            <select id="is_scolarise" name="scolarite">
+                <option th:selected="${ficheEntry.mineur.scolarise}" value="true">Scolarisé</option>
+                <option th:selected="${!ficheEntry.mineur.scolarise}" value="false">Non scolarisé</option>
+            </select>
+        </form>
+    </div>
+</div>

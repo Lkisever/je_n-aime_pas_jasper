@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="identite">
+    <div class="pb-8 rounded-lg border p-5 margin-bt bg2">
+        <h1 class="text-xl font-bold text-center" id="jeune">Fiche du jeune</h1>
+        <div>
+            <p class="text-xl font-bold"><span th:text="${ficheEntry.mineur.prenom}"></span> <span
+                    class="text-green-600" th:text="${ficheEntry.mineur.nom}"></span>
+            </p>
+            <p> Sexe : <span th:text="${ficheEntry.mineur.sexe}"></span>
+            </p>
+            <p> Né(e) le : <span th:text="${#dates.format(ficheEntry.mineur.dateNaissance,'dd-MM-yyyy')}"></span>
+            </p>
+        </div>
+
+        <div class="">
+            <p class="text-right">Généré le : <span class="text-small font-bold"
+                                                    th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy')}"></span>
+            </p>
+            <p class="text-right extra_small">à : <span
+                    th:text="${#dates.format(#dates.createNow(), 'HH')}"></span>h<span
+                    th:text="${#dates.format(#dates.createNow(), 'mm')}"></span> et <span
+                    th:text="${#dates.format(#dates.createNow(), 'ss')}"></span> secondes
+            </p>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>

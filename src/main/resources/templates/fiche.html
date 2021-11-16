@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fiche Jeune <span th:text="${ficheEntry.mineur.nom}"></span> <span
+        th:text="${ficheEntry.mineur.prenom}"></span></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <bookmarks>
+        <bookmark href="#sommaire" name="Sommaire"/>
+        <bookmark href="#jeune" name="Jeune"/>
+        <bookmark href="#adresse" name="Adresses"/>
+        <bookmark href="#pec" name="Prises en charge"/>
+    </bookmarks>
+</head>
+<body>
+
+<p id="top-right-corner"></p>
+<p id="top-left-corner">DPJJ</p>
+<p id="bottom-right-corner"></p>
+<p id="bottom-center">PARCOURS</p>
+<p id="bottom-left-corner"><img height="70" src="images/justice.png" style=""/></p>
+
+<div class="new-page middleh" style="vertical-align: middle;">
+    <p class="text-xl font-bold text-center" id="sommaire">SOMMAIRE</p>
+    <div class="toc-row"><a href="#jeune">Jeune</a></div>
+    <div class="toc-row"><a href="#adresse">Adresses</a></div>
+    <div class="toc-row"><a href="#scolarite">Scolarité</a></div>
+    <div class="toc-row"><a href="#info">Informations</a></div>
+    <div class="toc-row"><a href="#pec">Prises en charge</a></div>
+</div>
+
+<div class="pb-8 rounded-lg border p-5 margin-bt3 bg1 new-page">
+    <!-- FICHE DU JEUNE -->
+    <div th:replace="fragments/identite_jeune :: identite"></div>
+
+    <!-- ADRESSE -->
+    <div th:replace="fragments/adresses_jeune_parents :: adresses"></div>
+
+    <!-- SCOLARITE -->
+    <div th:replace="fragments/scolarite :: scolarite"></div>
+</div>
+
+<div class="pb-8 rounded-lg border p-5 margin-bt3 bg1 new-page">
+    <div class="p-5 rounded-lg margin-bt bg3">
+        <h1 class="text-xl font-bold text-center margin-bt" id="info">Informations complémentaires</h1>
+        <form>
+            <textarea cols="40" name="Informations" rows="10"/>
+        </form>
+    </div>
+</div>
+
+<!-- PEC -->
+<div th:replace="fragments/prises_en_charge_jeune :: pec"></div>
+
+</body>
+</html>
