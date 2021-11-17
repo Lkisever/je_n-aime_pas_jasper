@@ -234,7 +234,7 @@ button {
 
 #table_pec td, #table_pec th {
   border: 1px solid #ddd;
-    padding: 8px;
+  padding: 8px;
 }
 
 #table_pec th {
@@ -244,13 +244,28 @@ button {
 }
 
 #suivi_scolaire {
-  margin-left:auto;
-  margin-right:auto;
+  width:100%;
+  border-collapse: collapse;
+  padding: 25px;
+  display: table;
+}
+
+#suivi_scolaire tbody {
+  display: table;
+  width:100%;
 }
 
 #suivi_scolaire td, #suivi_scolaire th {
   border: 1px solid #ddd;
-  padding: 8px;
+  margin:2px 0px;
+  width: 33%;
+  text-align:center;
+}
+
+.specrow {
+    margin:2px 0px;
+    border-bottom:1px dotted #dadada;
+    width: 100%;
 }
 
 h1,
