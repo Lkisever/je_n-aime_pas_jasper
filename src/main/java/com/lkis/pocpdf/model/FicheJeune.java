@@ -11,4 +11,5 @@ public class FicheJeune {
     private List<Decisions> decisionsList;
     private Parent pere;
     private Parent mere;
+    private Scolarite scolarite ;
 }

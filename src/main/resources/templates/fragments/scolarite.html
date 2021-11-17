@@ -19,43 +19,43 @@
             <tbody>
                 <tr class="specrow">
                     <td><input type="checkbox" id="cm_un" name="cm_un" style="-fs-checkbox-style: square;"
-                               checked="true"/>
+                               th:checked="${ficheEntry.scolarite.cm1}"/>
                         <label for="cm_un">CM1</label>
                     </td>
                     <td><input type="checkbox" id="cm_deux" name="cm_deux" style="-fs-checkbox-style: square;"
-                                checked="true"/>
+                               th:checked="${ficheEntry.scolarite.cm2}"/>
                         <label for="cm_deux">CM2</label>
                     </td>
                     <td> <input type="checkbox" id="sixieme" name="sixieme" style="-fs-checkbox-style: square;"
-                                checked="true"/>
+                                th:checked="${ficheEntry.scolarite.sixieme}"/>
                         <label for="sixieme">6ème</label>
                     </td>
                 </tr>
                 <tr class="specrow">
                     <td><input type="checkbox" id="cinquieme" name="cinquieme" style="-fs-checkbox-style: square;"
-                               checked="true"/>
+                               th:checked="${ficheEntry.scolarite.cinquieme}"/>
                         <label for="cinquieme">5ème</label>
                     </td>
                     <td> <input type="checkbox" id="quatrieme" name="quatrieme" style="-fs-checkbox-style: square;"
-                                checked="true"/>
+                                th:checked="${ficheEntry.scolarite.quatrieme}"/>
                         <label for="quatrieme">4ème</label>
                     </td>
                     <td><input type="checkbox" id="troisieme" name="troisieme" style="-fs-checkbox-style: square;"
-                               checked="true"/>
+                               th:checked="${ficheEntry.scolarite.troisieme}"/>
                         <label for="troisieme">3ème</label>
                     </td>
                 </tr>
                 <tr class="specrow">
                     <td>  <input type="checkbox" id="seconde" name="seconde" style="-fs-checkbox-style: square;"
-                                 checked="true"/>
+                                 th:checked="${ficheEntry.scolarite.seconde}"/>
                         <label for="seconde">2nd</label>
                     </td>
                     <td> <input type="checkbox" id="premiere" name="premiere" style="-fs-checkbox-style: square;"
-                                checked="true"/>
+                                th:checked="${ficheEntry.scolarite.premiere}"/>
                         <label for="premiere">1ère</label>
                     </td>
                     <td><input type="checkbox" id="terminale" name="terminale" style="-fs-checkbox-style: square;"
-                               checked="true"/>
+                               th:checked="${ficheEntry.scolarite.terminale}"/>
                         <label for="terminale">Terminale</label>
                     </td>
                 </tr>

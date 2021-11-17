@@ -5,6 +5,7 @@ import com.lkis.pocpdf.model.Decisions;
 import com.lkis.pocpdf.model.FicheJeune;
 import com.lkis.pocpdf.model.Mineur;
 import com.lkis.pocpdf.model.Parent;
+import com.lkis.pocpdf.model.Scolarite;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -81,12 +82,15 @@ public class MineurHelper {
         mere.setPrenom("Beth");
         mere.setNom("SMITH");
 
+        Scolarite scolarite = new Scolarite(true, true,true,true,true,true,true,false,false) ;
+
         FicheJeune ficheJeune = new FicheJeune();
         ficheJeune.setAdresse(adresse);
         ficheJeune.setMineur(mineur);
         ficheJeune.setDecisionsList(decisionsList);
         ficheJeune.setMere(mere);
         ficheJeune.setPere(pere);
+        ficheJeune.setScolarite(scolarite);
 
         return ficheJeune;
     }
