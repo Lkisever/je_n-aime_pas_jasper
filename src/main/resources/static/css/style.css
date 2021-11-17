@@ -243,6 +243,16 @@ button {
   text-align: left;
 }
 
+#suivi_scolaire {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#suivi_scolaire td, #suivi_scolaire th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
 h1,
 h2,
 h3,
@@ -330,7 +340,6 @@ a {
 .pb-8 {
   padding-bottom: 2rem;
 }
-
 
 .table-fixed {
   table-layout: fixed;
