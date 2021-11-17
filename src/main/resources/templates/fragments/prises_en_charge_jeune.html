@@ -1,7 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
-<div class="landscapePage pb-8 rounded-lg border p-5 margin-bt bg1 " th:fragment="pec">
+<div class="pb-8 rounded-lg border p-5 margin-bt bg1 " th:fragment="pec">
+<!-- <div class="landscapePage pb-8 rounded-lg border p-5 margin-bt bg1 " th:fragment="pec"> -->
     <div class="p-5 rounded-lg margin-bt bg3">
         <h1 class="text-xl font-bold text-center margin-bt" id="pec">Prises en charge</h1>
         <table class="bg2" id="table_pec">
@@ -15,10 +16,10 @@
             </thead>
             <tbody>
             <tr th:each="decision : ${ficheEntry.decisionsList}" th:style="${decision.dateFin.after(#dates.createNow())} ? 'background: #DAF7A6'">
-                <td th:text="${decision.code}"></td>
-                <td th:text="${decision.libelle}"></td>
-                <td th:text="${#dates.format(decision.dabebut,'dd-MM-yyyy')}"></td>
-                <td th:text="${#dates.format(decision.dateFin,'dd-MM-yyyy')}"></td>
+                <td th:text="${decision.code}" class="dec_code"></td>
+                <td th:text="${decision.libelle}" class="dec_lib"></td>
+                <td th:text="${#dates.format(decision.dabebut,'dd-MM-yyyy')}" class="dec_date"></td>
+                <td th:text="${#dates.format(decision.dateFin,'dd-MM-yyyy')}" class="dec_date"></td>
             </tr>
             </tbody>
         </table>

@@ -230,11 +230,23 @@ button {
 #table_pec {
   border-collapse: collapse;
   width: 100%;
+  display: table;
 }
 
 #table_pec td, #table_pec th {
   border: 1px solid #ddd;
   padding: 8px;
+}
+
+.dec_code {
+}
+
+.dec_lib {
+
+}
+
+.dec_date {
+ width:15%;
 }
 
 #table_pec th {
